@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Process | Sarah Clinton</title>
+<meta name="description" content="How a portrait comes together, from the first words to the finished painting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  .story { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.4vw; padding: 2vh 6vw 6vh; align-items: start; }
+  .step img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+  .step .frame { padding: 8px; }
+  .step:nth-child(even) { margin-top: 6vh; }
+  .step .num { display: block; margin-top: 16px; font-family: var(--display); font-size: 30px; line-height: 1; color: var(--accent); }
+  .step h2 { font-family: var(--display); font-weight: 400; font-size: 24px; margin-top: 4px; }
+  .step p { font-size: 14px; color: var(--muted); line-height: 1.55; margin-top: 4px; }
+  .step.words .paper { aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; background: var(--paper); }
+  .pile { position: relative; overflow: hidden; }
+  .pile img { position: absolute; aspect-ratio: auto; max-width: none; box-shadow: 0 10px 20px -12px rgba(0,0,0,.45); }
+  .pile .p1 { width: 78%; left: -8%;  top: 3%;  transform: rotate(-9deg); }
+  .pile .p2 { width: 96%; left: 12%;  top: 14%; transform: rotate(7deg); }
+  .pile .p3 { width: 62%; left: 44%;  top: 62%; transform: rotate(-6deg); }
+  .pile .p4 { width: 96%; left: -12%; top: 70%; transform: rotate(4deg); }
+  .pile .p5 { width: 110%; left: -5%; top: 40%; transform: rotate(-3deg); box-shadow: 0 16px 28px -14px rgba(0,0,0,.5); }
+  .step.portrait-final .frame { padding: 12px; box-shadow: 0 30px 50px -24px rgba(0,0,0,.45); }
+  .film { display: grid; grid-template-columns: auto 1fr; gap: 4vw; align-items: center; padding: 4vh 6vw 10vh; border-top: 1px solid var(--rule); }
+  .film video { width: 260px; aspect-ratio: 9/16; object-fit: cover; background: #000; }
+  .film h2 { font-family: var(--display); font-weight: 400; font-size: 36px; line-height: 1.1; }
+  .film p { margin-top: 10px; color: #4a443e; max-width: 30em; }
+  .film .cta { margin-top: 28px; }
+  @media (max-width: 1000px) { .story { grid-template-columns: repeat(2, 1fr); } .step:nth-child(even) { margin-top: 0; } }
+  @media (max-width: 600px) { .story, .film { grid-template-columns: 1fr; } .film video { width: 100%; } }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="wordmark" href="index.html">Sarah Clinton<span>painting the feeling of time and place</span></a>
+  <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+  <nav>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a class="here" href="commissions.html">Commissions</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+<section class="page-head">
+  <p class="eyebrow">Process</p>
+  <h1>The making of a portrait</h1>
+  <p class="lede">John T. Dorsey, 2024</p>
+</section>
+
+<div class="story">
+  <figure class="step words">
+    <div class="frame"><div class="paper pile">
+      <img class="p1" src="images/process/frag-4.jpg" alt="">
+      <img class="p2" src="images/process/frag-2.jpg" alt="">
+      <img class="p3" src="images/process/frag-5.jpg" alt="">
+      <img class="p4" src="images/process/frag-3.jpg" alt="">
+      <img class="p5" src="images/process/scrap.jpg" alt="A scrap of handwritten notes on top of a pile of notes and law pages">
+    </div></div>
+    <span class="num">I</span><h2>The words</h2>
+    <p>Handwritten notes and pages of law become the surface of the painting.</p>
+  </figure>
+  <figure class="step">
+    <div class="frame"><img src="images/process/drawing.jpg" alt="The figure drawn over the collaged pages"></div>
+    <span class="num">II</span><h2>The drawing</h2>
+    <p>The figure is drawn over the collage, then blocked in with thin color.</p>
+  </figure>
+  <figure class="step">
+    <div class="frame"><img src="images/process/at-the-easel.jpg" alt="Painting the portrait at the easel" style="object-position: center 30%"></div>
+    <span class="num">III</span><h2>The paint</h2>
+    <p>Layer by layer the paint covers the words, but never all of them.</p>
+  </figure>
+  <figure class="step portrait-final">
+    <div class="frame"><img src="images/gallery/full/john-t-dorsey.jpg" alt="John T. Dorsey, finished portrait"></div>
+    <span class="num">IV</span><h2>The portrait</h2>
+    <p>36x30 inches &middot; Acrylic paint on collaged background of personal handwritten notes, references and maps. &middot; 2024</p>
+  </figure>
+</div>
+
+<section class="film">
+  <video src="images/process/dorsey-process.mp4" poster="images/process/dorsey-process-poster.jpg" muted loop playsinline controls preload="metadata"></video>
+  <div>
+    <h2>The whole process in nineteen seconds</h2>
+    <p>Interested in a portrait of your own?</p>
+    <div class="cta">
+      <a class="btn" href="commissions.html">Commissions</a>
+      <a class="link" href="https://www.instagram.com/sarahclintonart" target="_blank" rel="noopener">More process on Instagram</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div><span class="label">Email</span><a href="mailto:sarah@sarahclintonart.com">sarah@sarahclintonart.com</a></div>
+  <div><span class="label">Connect</span><a href="https://www.instagram.com/sarahclintonart" target="_blank" rel="noopener">Instagram</a> &nbsp;&middot;&nbsp; <a href="https://www.facebook.com/sarahclintonart" target="_blank" rel="noopener">Facebook</a></div>
+  <div class="copy">&copy; 2026 by Sarah Clinton</div>
+</footer>
+<script>
+  const v = document.querySelector('.film video');
+  new IntersectionObserver(es => es.forEach(e => e.isIntersecting ? v.play().catch(() => {}) : v.pause()), { threshold: .5 }).observe(v);
+</script>
+</body>
+</html>

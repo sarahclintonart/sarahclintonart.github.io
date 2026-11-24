@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Sarah Clinton</title>
+<meta name="description" content="painting the feeling of time and place">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site">
+  <a class="wordmark" href="index.html">Sarah Clinton<span>painting the feeling of time and place</span></a>
+  <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+  <nav>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="about.html">About</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="shop.html">Shop</a>
+    <a class="here" href="contact.html">Contact</a>
+  </nav>
+</header>
+<main>
+
+<section class="contact">
+  <figure class="contact-art"><div class="frame"><img src="images/wix/w-af631ab209.jpg" alt="Painting by Sarah Clinton" width="800" height="533"></div></figure>
+  <div class="contact-body">
+    <h1>Contact me</h1>
+    <form id="contact-form" class="form">
+      <div class="row2">
+        <label>First Name<input name="first" type="text" autocomplete="given-name"></label>
+        <label>Last Name<input name="last" type="text" autocomplete="family-name"></label>
+      </div>
+      <label>Email<input name="email" type="email" required autocomplete="email"></label>
+      <label>Message<textarea name="message" rows="6"></textarea></label>
+      <button class="btn" type="submit">Send</button>
+    </form>
+    <p class="direct"><span class="label">Email</span> <a href="mailto:sarah@sarahclintonart.com">sarah@sarahclintonart.com</a></p>
+    <p class="direct"><a href="https://www.instagram.com/sarahclintonart" target="_blank" rel="noopener">Follow me @sarahclintonart</a></p>
+
+    <div class="newsletter">
+      <h2>Stay in touch</h2>
+      <p>My newsletter comes out 4-6 times a year with show invites and news from the studio</p>
+      <form id="news-form" class="form">
+        <p class="label">Join my mailing list</p>
+        <label>Email*<input name="email" type="email" required autocomplete="email"></label>
+        <label class="check"><input name="ok" type="checkbox" required> I want to subscribe to your mailing list.</label>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site">
+  <div><span class="label">Email</span><a href="mailto:sarah@sarahclintonart.com">sarah@sarahclintonart.com</a></div>
+  <div><span class="label">Connect</span><a href="https://www.instagram.com/sarahclintonart" target="_blank" rel="noopener">Instagram</a> &nbsp;&middot;&nbsp; <a href="https://www.facebook.com/sarahclintonart" target="_blank" rel="noopener">Facebook</a></div>
+  <div class="copy">&copy; 2026 by Sarah Clinton</div>
+</footer>
+
+<script src="js/site.js"></script>
+<script>
+  // Static site: these forms open the visitor's email app with the message filled in.
+  const TO = 'sarah@sarahclintonart.com';
+  document.getElementById('contact-form').addEventListener('submit', ev => {
+    ev.preventDefault(); const f = ev.target;
+    const name = (f.first.value + ' ' + f.last.value).trim();
+    const body = f.message.value + '\n\n' + name + '\n' + f.email.value;
+    location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Website message' + (name ? ' from ' + name : '')) + '&body=' + encodeURIComponent(body);
+  });
+  document.getElementById('news-form').addEventListener('submit', ev => {
+    ev.preventDefault(); const f = ev.target;
+    location.href = 'mailto:' + TO + '?subject=' + encodeURIComponent('Please add me to your mailing list') + '&body=' + encodeURIComponent('Please add ' + f.email.value + ' to your mailing list.');
+  });
+</script>
+</body>
+</html>

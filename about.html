@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Sarah Clinton</title>
+<meta name="description" content="Sarah Clinton is a painter based in Nashville, TN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  :root {
+    --bg: #F3EEE4; --ink: #2A2724; --muted: #6E665C; --accent: #B4793A;
+    --rule: #D9D0C1; --frame: #FFFFFF;
+    --display: "Cormorant Garamond", Georgia, serif;
+    --body: "Work Sans", system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.7; }
+  a { color: inherit; text-decoration: none; }
+
+
+  .eyebrow { font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--accent); margin-bottom: 18px; }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(48px, 6vw, 84px); line-height: 1; margin-bottom: 40px; }
+
+  .bio { display: grid; grid-template-columns: 5fr 7fr; gap: 6vw; padding: 9vh 6vw 10vh; align-items: start; }
+  .portrait { position: sticky; top: 40px; }
+  .portrait .frame { background: var(--frame); padding: 14px; box-shadow: 0 30px 60px -25px rgba(0,0,0,.35); }
+  .portrait img { display: block; width: 100%; height: auto; }
+  .bio-text p { max-width: 36em; margin-bottom: 1.3em; color: #3d3833; }
+  .bio-text p.eyebrow { color: var(--accent); margin-bottom: 18px; }
+  .bio-text p.lead { font-family: var(--display); font-size: 27px; line-height: 1.35; color: var(--ink); }
+
+  .record { padding: 0 6vw 12vh; }
+  .record section { display: grid; grid-template-columns: 5fr 7fr; gap: 6vw; border-top: 1px solid var(--rule); padding: 48px 0; }
+  .record h2 { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1.1; }
+  .record ul { list-style: none; }
+  .record li { padding: 12px 0; border-bottom: 1px solid var(--rule); }
+  .record li:last-child { border-bottom: none; }
+  .when { display: block; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 2px; }
+  .record a { border-bottom: 1px solid var(--accent); }
+  .record a:hover { color: var(--accent); }
+
+
+  @media (max-width: 800px) {
+    .bio, .record section { grid-template-columns: 1fr; }
+    .portrait { position: static; max-width: 420px; }
+  }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="wordmark" href="index.html">Sarah Clinton<span>painting the feeling of time and place</span></a>
+  <button class="menu-btn" aria-label="Menu" onclick="document.body.classList.toggle('menu-open')">Menu</button>
+  <nav>
+    <a href="portfolio.html">Portfolio</a>
+    <a class="here" href="about.html">About</a>
+    <a href="exhibitions.html">Exhibitions</a>
+    <a href="commissions.html">Commissions</a>
+    <a href="shop.html">Shop</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <section class="bio">
+    <figure class="portrait">
+      <div class="frame"><img src="images/sarah-clinton.jpg" alt="Sarah Clinton"></div>
+    </figure>
+    <div class="bio-text">
+      <p class="eyebrow">About</p>
+      <h1>Sarah Clinton</h1>
+      <p class="lead">Sarah Clinton is a painter based in Nashville, TN working with a variety of media to capture the people, places, and things that hold significance in our lives.</p>
+      <p>Her artistic journey began after the birth of her daughter, who was diagnosed with a rare genetic disorder (SynGAP1), which causes intellectual disability and other challenges. Navigating the complexities of parenting a child with special needs, painting emerged as a therapeutic outlet for Sarah to process her emotions. Observing her daughter's distinct perspective on the world, Sarah continually reframes her own outlook. This unique lens is applied to her work where she strives to capture the beauty in unnoticed or mundane moments.</p>
+      <p>Sarah's work was recently showcased in the Soundwaves Gallery at the Nashville Soccer Club's GEODIS Park, and her Nashville-themed pieces were recently displayed in the Flying Solo Exhibition at the Nashville airport. Additionally, her paintings are regularly featured in juried art shows throughout Nashville. As a proud board member of the Chestnut Group, an organization dedicated to plein air painting for land conservation and preservation, Sarah is committed to leveraging her art for positive change.</p>
+      <p>Sarah was one of 12 artists selected to participate in the inaugural Artist in Residence Program in the historic downtown Nashville Arcade, exhibiting and curating a new show for each monthly art crawl from October 2024 to June 2025.</p>
+    </div>
+  </section>
+
+  <div class="record">
+    <section>
+      <h2>Selected Exhibitions</h2>
+      <ul>
+        <li><span class="when">August 20 &ndash; September 26 2025</span>Neighbors &ndash; A Group Exhibition with the 2024/2025 artists in the Arcade Arts residency program, Leu Center for the Arts, Watkins College of Art, Belmont University, Nashville, TN</li>
+        <li><span class="when">Oct 2024-June 2025</span>Curated exhibits each month for the Downtown Art Crawl. Included solo exhibits as well as group exhibits hosting outside artists, 65 Arcade Alley, studio 60, Nashville, TN</li>
+        <li><span class="when">April 2025</span>Curated Debut show 10 artists in the Nashville Painters Salon, Arcade Arts, 65 Arcade Alley Studio 60, Nashville, TN</li>
+        <li><span class="when">February 2025</span><a href="https://www.nashvillesc.com/geodispark/art/soundwaves" target="_blank" rel="noopener">Soundwaves Gallery exhibition juried by Nashville Soccer Club in partnership with the Arts &amp; Business Council of Greater Nashville</a></li>
+        <li><span class="when">March 2024-June 2024</span>Flying Solo Exhibition at the Nashville International Airport, Concourse D</li>
+        <li><span class="when">October 2023</span>Artclectic, The University School of Nashville, Nashville</li>
+        <li><span class="when">April 2023</span><a href="https://www.artmumsunited.com/sarahclinton" target="_blank" rel="noopener">Fearlessly and Wonderfully Created Fine Art Show, benefitting Saddle Up!, Nashville, TN,</a></li>
+        <li><span class="when">October 2022</span><a href="https://www.artmumsunited.com/sarahclinton" target="_blank" rel="noopener">Firefly Artisan Fair, Nashville, TN, Best in Show</a></li>
+        <li><span class="when">September 2022</span><a href="https://www.artmumsunited.com/sarahclinton" target="_blank" rel="noopener">Solo show (online), Art Mums United</a></li>
+        <li><span class="when">April 2022</span>&ldquo;<a href="https://www.artmumsunited.com/artistmotherexhibit" target="_blank" rel="noopener">Artist, Mother, Proud &amp; Serious</a>&rdquo; online group exhibit by Art Mums United, curated by Brandi Hofer</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Professional activities</h2>
+      <ul>
+        <li>Artist in Residence October 2024- June 2025, Arcade Arts, Nashville, TN</li>
+        <li>Board member of <a href="https://chestnutgroup.org/" target="_blank" rel="noopener">The Chestnut Group, a non-profit plein air painting group devoted to conservation</a></li>
+        <li>One of 25 artists selected for the 2021 Class of <a href="https://www.youtube.com/watch?v=MNLySxNO3VE&amp;list=PL1G6afoTssWhYtG0hW1EjeULPOohemWJ3&amp;index=8" target="_blank" rel="noopener">Periscope</a>: Entrepreneur Training, Arts and Business Council of Greater Nashville</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Collections</h2>
+      <ul>
+        <li>Belmont University College of Law</li>
+        <li>Montgomery Bell Academy</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Memberships</h2>
+      <ul>
+        <li>Portrait Society of America</li>
+        <li>American Impressionist Society</li>
+        <li>Curator and coordinator, Nashville Painters Salon</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Publications</h2>
+      <ul>
+        <li>&ldquo;A Conversation with Sarah Clinton&rdquo; on Drawing South Podcast, hosted by Mike Windy, June 2025. Listen <a href="https://open.spotify.com/episode/1DT7kyPiIOtFQ2h3fJo6Qb" target="_blank" rel="noopener">here</a>,</li>
+        <li>Cole Villena and Laura Hutson Hunter, <a href="https://www.nashvillescene.com/cover-2-6-25-jpg/image_6358e6a0-e27f-11ef-97e9-dfa5cc65e77a.html" target="_blank" rel="noopener">&ldquo;A New Perspective,&rdquo;</a> The Nashville Scene, Volume 44, Number 2, (February 6-12, 2025), 11, Cover art Featured</li>
+        <li>The Huts Magazine Issue 5, ART MUMS UNITED artist, mother, proud &amp; serious, Print and online at <a href="https://thehutsmagazine.com/issue-5" target="_blank" rel="noopener">thehutsmagazine.com/issue-5</a></li>
+        <li>Breaking Ground: Arts Issue 105, TN Council on Developmental Disabilities publication, Feb/March 2021, Print and online at <a href="https://www.tn.gov/cdd/projects-and-initiatives/public-awareness/breaking-ground.html" target="_blank" rel="noopener">tn.gov/cdd</a></li>
+      </ul>
+    </section>
+  </div>
+</main>
+
+<footer class="site">
+  <div><span class="label">Email</span><a href="mailto:sarah@sarahclintonart.com">sarah@sarahclintonart.com</a></div>
+  <div><span class="label">Connect</span><a href="https://www.instagram.com/sarahclintonart" target="_blank" rel="noopener">Instagram</a> &nbsp;&middot;&nbsp; <a href="https://www.facebook.com/sarahclintonart" target="_blank" rel="noopener">Facebook</a></div>
+  <div class="copy">&copy; 2026 by Sarah Clinton</div>
+</footer>
+</body>
+</html>
