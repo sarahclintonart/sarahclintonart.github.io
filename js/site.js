@@ -2,7 +2,9 @@
 (function () {
   const lb = document.getElementById('lb');
   if (!lb) return;
-  const items = Array.from(document.querySelectorAll('[data-lb]'));
+  const all = Array.from(document.querySelectorAll('[data-lb]'));
+  const main = all.filter(el => !el.dataset.series);
+  let items = main;
   const im = document.getElementById('lb-img'), cap = document.getElementById('lb-cap');
   let cur = 0;
   function show(i) {
@@ -15,9 +17,15 @@
     document.body.style.overflow = 'hidden';
   }
   function close() { lb.classList.remove('open'); im.src = ''; document.body.style.overflow = ''; }
-  items.forEach((el, i) => el.addEventListener('click', ev => {
+  main.forEach((el, i) => el.addEventListener('click', ev => {
     if (ev.target.closest('a')) return; // let links (like "Contact me") work
-    show(i);
+    items = main; show(i);
+  }));
+  // "See the series" links open a hidden group of paintings
+  document.querySelectorAll('[data-series-open]').forEach(a => a.addEventListener('click', ev => {
+    ev.preventDefault();
+    items = all.filter(el => el.dataset.series === a.dataset.seriesOpen);
+    if (items.length) show(0);
   }));
   document.getElementById('lb-close').addEventListener('click', close);
   document.getElementById('lb-prev').addEventListener('click', () => show(cur - 1));
